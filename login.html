@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+        }
+        .h-custom {
+            height: calc(80% - 73px);
+        }
+        @media (max-width: 450px) {
+        .h-custom {
+            height: 80%;
+        }
+        }
+        body {
+          background-color: #333533;
+        }
+
+        .form-label{
+            color:#F5CB5C;
+        }
+    </style>
+  </head>
+  <div class="container-fluid" style="margin-top:40px;">
+    <div class="container" style="margin-bottom:-100px;">
+        <div class="row">
+            <div class="col-12 justify-content-center text-center">
+                <img class="img-fluid" src="img/UNFPA.png" style="max-width: 240px;">
+            </div>
+        </div>
+        <div class="row text-center" style="margin-top:20px;">
+            <div class="col-12" style="color:#F5CB5C;">
+                <h1>Room Booking App</h1>
+            </div>
+        </div>
+    </div>
+  </div>
+    <section class="vh-60" style="margin-top:150px;">
+        <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+            <!-- <img src="img/guess.png"
+                class="img-fluid" alt="Sample image" style="width:450px;"> -->
+                <div class="card mb-3 text-end" style="width: 34rem; height:16rem;background-color: #242423;">
+                    <div class="card-body">
+                      <h5 class="card-title fs-4" style="color:#F5CB5C;">Stay organized, stay on track.</h5>
+                      <p class="card-text fs-5" style="color:#E8EDDF">Never miss a beat with our comprehensive calendar feature. Easily view, manage, and update your booked meetings, ensuring you and your team are always in sync. Receive timely reminders, and enjoy the convenience of having all your reservations at your fingertips.</p>
+                      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-9 col-lg-6 col-xl-5 offset-xl-1">
+            <form>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3">Username</label>
+                <input type="email" id="form3Example3" class="form-control form-control-lg"
+                    placeholder="Enter Username" style="max-width:400px;"/>
+                </div>
+    
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                <label class="form-label" for="form3Example4">Password</label>
+                <input type="password" id="form3Example4" class="form-control form-control-lg"
+                    placeholder="Enter password" style="max-width:400px;"/>
+                </div>
+    
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+    
+                <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="button" class="btn btn-primary btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;
+                    background-color: #F5CB5C; 
+                    border-color:#F5CB5C;
+                    color:black;
+                    font-weight: bold;">Login</button>
+                </div>
+    
+            </form>
+            </div>
+        </div>
+        </div>
+    </section>
+  </body>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</html>
