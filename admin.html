@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.min.css" rel="stylesheet">
+    <script src='dist/index.global.js'></script>
+    <style>
+        body {
+          background-color: #333533;
+        }
+
+        .card{
+          background-color: #E8EDDF;
+          border-color: #333533 !important;
+          border:0px !important;
+        }
+
+        .fc-event-main{
+          background-color: #333533;
+          border-color: #333533 !important;
+          color: white !important;
+          border: 0;
+        }
+
+        .card-body{
+          background-color: #E8EDDF;
+        }
+
+        .list-group-item{
+          background-color: #E8EDDF;
+        }
+
+        .card-header{
+          background-color: #CFDBD5;
+          color: black;
+          font-weight: bold;
+        }
+
+        .card-header-tabs .nav-link.active{
+          background-color: #E8EDDF;
+          border-color: #E8EDDF;
+          font-weight: bold;
+        }
+
+        .card-header-tabs .nav-link{
+          color: #333533;
+        }
+        #calendar {
+          /* float: left; */
+          /* max-width: 1100px; */
+          margin: 0 auto;
+        }
+
+        h2{
+          font-size: 20px !important;
+        }
+
+        .fc-button-primary{
+          background-color: #F5CB5C!important;
+          border-color: #F5CB5C!important;
+          color:black !important;
+        }
+        nav{
+          color:#F5CB5C !important;
+        }
+        .navbar .nav-link{
+          color:#F5CB5C !important;
+        }
+        .navbar-text{
+          color:#F5CB5C !important;
+        }
+
+        .fc-scrollgrid-section-header {
+          background-color: #242423;
+        }
+
+        .fc-scroller a{
+          color: black;
+        }
+
+        .fc-scrollgrid-section-header a{
+          color:#E8EDDF;
+          text-decoration: none;
+        }
+        .fc-timegrid-axis-frame{
+          background-color: #464746;
+          color: #E8EDDF;
+        }
+        .fc-timegrid-slot-label {
+          background-color: #464746;
+          border-color: #464746 !important;
+          color: #E8EDDF;
+        }
+
+        table{
+          border-color: #242423 !important;
+        }
+
+        .fc-theme-standard td, .fc-theme-standard th{
+          
+        }
+
+        .dropdown-menu{
+          min-width: 5rem !important;
+        }
+
+        .shadow{
+          box-shadow: 0 0.5rem 1rem black !important;
+        }
+
+        
+    </style>
+    <link href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">
+    
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: #242423;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:#F5CB5C !important;">Room Booking App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="room.html">Room</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book2.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Hi, Admin!
+              </a>
+              <ul class="dropdown-menu"  style="right:20px !important; width:20px !important;">
+                <li><a class="dropdown-item" href="#" style="color:#F5CB5C !important;">Logout</a></li>
+              </ul>
+              </div>
+            </span>
+          </div>
+        </div>
+    </nav>
+    <div class="" style="margin:20px;">
+      <div class="card" style="width:80%;">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <button class="btn btn-success btn" style="margin-bottom:15px;">Add Room</button>
+          <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Capacity</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tr>
+              <td>Room 1</td>
+              <td>100</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem, dolores recusandae iusto et dolorum?</td>
+              <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Room 2</td>
+              <td>100</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem, dolores recusandae iusto et dolorum?</td>
+              <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Room 3</td>
+              <td>100</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem, dolores recusandae iusto et dolorum?</td>
+              <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Room 4</td>
+              <td>100</td>
+              <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus autem, dolores recusandae iusto et dolorum?</td>
+              <td>
+                <button class="btn btn-primary btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Capacity</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+      </div>
+      
+    </div>
+    <!-- <div class="bg-primary" style="height:2px;">
+    </div> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+  <script src="js/datatables.bootstrap.min.js"></script>
+  <script type="text/javascript">
+    new DataTable('#example');
+  </script>
+</html>
