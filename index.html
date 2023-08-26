@@ -187,28 +187,32 @@
     </div>
     </div>
 
-    <div class="col-2">
-    <div class="card shadow" style="width: 17.5rem;margin-top:20px;">
-      <div class="card-header">
-        Latest Booking
+    <div class="col-2" id="centerrside" style="">
+      <div class=" d-flex justify-content-center">
+      <div class="card shadow" id="addmargin" style="width: 17.5rem;margin-top:20px;">
+        <div class="card-header">
+          Latest Booking
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">07/30 - Room B, booked by Carla</li>
+          <li class="list-group-item">07/28 - Room A, booked by Anthony</li>
+          <li class="list-group-item">08/01 - Room C, booked by Ali</li>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">07/30 - Room B, booked by Carla</li>
-        <li class="list-group-item">07/28 - Room A, booked by Anthony</li>
-        <li class="list-group-item">08/01 - Room C, booked by Ali</li>
-      </ul>
-    </div>
-
-    <div class="card shadow" style="width: 17.5rem;margin-top:20px;">
-      <div class="card-header">
-        Upcoming Event
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">07/30 - Room B, Annual Meeting</li>
-        <li class="list-group-item">07/28 - Room A, Pitch Presentation</li>
-        <li class="list-group-item">08/01 - Room C, IT Team Progress</li>
-      </ul>
-    </div>
+      
+      <div class=" d-flex justify-content-center">
+      <div class="card shadow" id="addmargin2" style="width: 17.5rem;margin-top:20px;">
+        <div class="card-header">
+          Upcoming Event
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">07/30 - Room B, Annual Meeting</li>
+          <li class="list-group-item">07/28 - Room A, Pitch Presentation</li>
+          <li class="list-group-item">08/01 - Room C, IT Team Progress</li>
+        </ul>
+      </div> 
+      </div>
     </div>
     </div>
     <!-- <div class="bg-primary" style="height:2px;">
@@ -225,7 +229,18 @@
           if(mobileCheck()) {
             console.log("Mobile browser detected");
             var elerem = document.getElementById("removecol");
+            var elecent = document.getElementById("centerrside");
+            var elemarg = document.getElementById("addmargin");
+            var elemarg2 = document.getElementById("addmargin2");
             elerem.classList.remove("col-9");
+            elecent.style.width = "100%";
+            // elecent.style.height = "100%";
+            // elecent.classList.add("d-flex");
+            elecent.classList.add("justify-content-center");
+            elemarg.classList.add("row");
+            elemarg.classList.add("row");
+            // elemarg.style.marginLeft = "20px";
+            // elemarg2.style.marginLeft = "20px";
             var initviewvalue = 'listWeek';
             var headerToolbarvalue = {
             }
